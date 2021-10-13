@@ -4,6 +4,8 @@ A basic Flutter project that tests a potential issue with the [blobs](https://pu
 
 When using `Blob.animatedRandom`, the duration of the animated blob seems to be stuck to the initial value, even if it is changed using `setState` in a `StatefulWidget`.
 
+See the [related issue](https://github.com/lokesh-coder/flutter_blobs/issues/12) in the flutter_blobs GitHub Repository.
+
 ### Video of the issue
 
 Here is the test app running on an Android 11.0 (API 30) emulator. Pressing the FAB button assigns a random duration and a random color. So the duration keeps changing (as reflected in the app bar), but the animation of the blob shape doesn't seem to change its rythm.
@@ -20,7 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
   final Random _random = Random();
   Color _color = Colors.blueGrey;
 
-  // The duration of the animated blob seems to be stuck to this initial value, even if we change it using setState.
+  // The duration of the animated blob seems to be stuck to this initial value,
+  // even if we change it using setState.
   int _duration = 500;
 
   @override
