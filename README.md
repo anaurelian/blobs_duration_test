@@ -1,16 +1,14 @@
 # blobs_duration_test
 
-A new Flutter project.
+A basic Flutter project that tests a potential issue with the [blobs](https://pub.dev/packages/blobs) Flutter Package.
 
-## Getting Started
+When using `Blob.animatedRandom`, the duration of the animated blob seems to be stuck to the initial value, even if we change it using `setState` in a `StatefulWidget` ([see the code](lib/main.dart)).
 
-This project is a starting point for a Flutter application.
+### Video of the issue
 
-A few resources to get you started if this is your first Flutter project:
+Here is the test app running on an Android 11.0 (API 30) emulator. Pressing the FAB button assigns a random duration and a random color. So the duration keeps changing, but the animation of the blob shape doesn't seem to change its rythm.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+https://user-images.githubusercontent.com/24680762/137085863-23207b7e-76a7-4aa0-b989-58f3c7648d5d.mp4
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ 
+
